@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy 1st Month, Lovei 💜</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", Arial, sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #eadcff,
+                #d8b4fe,
+                #f3e8ff,
+                #cdb4f6
+            );
+
+            min-height: 100vh;
+            color: #555;
+            overflow-x: hidden;
+        }
+
+        /* FLOATING HEARTS */
+
+        .heart-float {
+            position: fixed;
+            color: #a66bbe;
+            font-size: 25px;
+            animation: float 7s linear infinite;
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart1 {
+            left: 8%;
+            bottom: -50px;
+            animation-delay: 0s;
+        }
+
+        .heart2 {
+            left: 25%;
+            bottom: -50px;
+            animation-delay: 2s;
+        }
+
+        .heart3 {
+            left: 70%;
+            bottom: -50px;
+            animation-delay: 4s;
+        }
+
+        .heart4 {
+            left: 88%;
+            bottom: -50px;
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+
+        }
+
+        /* MAIN CONTAINER */
+
+        .container {
+            width: 90%;
+            max-width: 850px;
+
+            background: rgba(255, 255, 255, 0.95);
+
+            padding: 45px;
+
+            border-radius: 35px;
+
+            box-shadow:
+                0 15px 45px rgba(91, 52, 120, 0.25);
+
+            text-align: center;
+
+            margin: 50px auto;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        /* TOP HEART */
+
+        .heart {
+            font-size: 65px;
+            color: #9b59b6;
+
+            animation: heartbeat 1.5s infinite;
+
+            margin-bottom: 5px;
+        }
+
+        @keyframes heartbeat {
+
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+
+        }
+
+        /* TITLE */
+
+        h1 {
+            color: #8e44ad;
+            font-size: 38px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #9b7bb5;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* DIVIDER */
+
+        .divider {
+            width: 70%;
+            height: 2px;
+
+            background: linear-gradient(
+                to right,
+                transparent,
+                #c8a2df,
+                transparent
+            );
+
+            margin: 30px auto;
+        }
+
+        /* PHOTO SECTION */
+
+        .photos-title {
+            color: #8e44ad;
+            font-size: 25px;
+            margin-top: 35px;
+        }
+
+        .photos-subtitle {
+            color: #9b7bb5;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin: 25px 0 40px;
+        }
+
+        .photo-card {
+            background: #faf5ff;
+
+            padding: 10px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 6px 18px rgba(126, 87, 194, 0.18);
+
+            transition: 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-8px) rotate(1deg);
+            box-shadow:
+                0 12px 25px rgba(126, 87, 194, 0.25);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 210px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            border: 3px solid #d8b4fe;
+        }
+
+        .photo-card p {
+            color: #8e44ad;
+            font-size: 14px;
+            margin: 10px 3px 5px;
+            font-weight: 500;
+        }
+
+        /* MESSAGE */
+
+        .message {
+            text-align: left;
+
+            line-height: 1.9;
+
+            font-size: 16px;
+
+            color: #555;
+        }
+
+        .message p {
+            margin-bottom: 20px;
+        }
+
+        /* HIGHLIGHT */
+
+        .highlight {
+            background: linear-gradient(
+                135deg,
+                #f3e8ff,
+                #eadcff
+            );
+
+            padding: 20px;
+
+            border-radius: 20px;
+
+            margin: 25px 0;
+
+            color: #7b3f98;
+
+            font-weight: 500;
+
+            border-left: 5px solid #a66bbe;
+        }
+
+        /* ENDING */
+
+        .ending {
+            margin-top: 35px;
+
+            font-size: 19px;
+
+            color: #8e44ad;
+
+            font-weight: bold;
+
+            text-align: center;
+        }
+
+        /* SPARKLES */
+
+        .stars {
+            margin-top: 25px;
+
+            font-size: 22px;
+
+            letter-spacing: 8px;
+
+            color: #9b59b6;
+
+            text-align: center;
+        }
+
+        .small {
+            margin-top: 20px;
+
+            font-size: 13px;
+
+            color: #aaa;
+
+            text-align: center;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .container {
+                width: 92%;
+                padding: 25px;
+                border-radius: 25px;
+            }
+
+            h1 {
+                font-size: 29px;
+            }
+
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-card img {
+                height: 280px;
+            }
+
+            .message {
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- FLOATING HEARTS -->
+
+    <div class="heart-float heart1">♡</div>
+    <div class="heart-float heart2">♥</div>
+    <div class="heart-float heart3">♡</div>
+    <div class="heart-float heart4">♥</div>
+
+
+    <!-- MAIN WEBSITE -->
+
+    <div class="container">
+
+
+        <!-- HEART -->
+
+        <div class="heart">
+            ♡
+        </div>
+
+
+        <!-- TITLE -->
+
+        <h1>
+            Happy 1st Month, Lovei 💜
+        </h1>
+
+        <p class="subtitle">
+            One month of us — through the good days and the difficult ones.
+        </p>
+
+
+        <div class="divider"></div>
+
+
+        <!-- THREE PHOTOS -->
+
+        <h2 class="photos-title">
+            A Little Piece of Us 💜
+        </h2>
+
+        <p class="photos-subtitle">
+            Three little memories that I want to keep.
+        </p>
+
+
+        <div class="photo-gallery">
+
+
+            <!-- PHOTO 1 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="photo1.jpg"
+                    alt="Our first photo"
+                >
+
+                <p>
+                    ♡ One of my favorite memories
+                </p>
+
+            </div>
+
+
+            <!-- PHOTO 2 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="photo2.jpg"
+                    alt="Our second photo"
+                >
+
+                <p>
+                    ♡ A moment I'll always remember
+                </p>
+
+            </div>
+
+
+            <!-- PHOTO 3 -->
+
+            <div class="photo-card">
+
+                <img
+                    src="photo3.jpg"
+                    alt="Our third photo"
+                >
+
+                <p>
+                    ♡ Another little memory of us
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="divider"></div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="message">
+
+
+            <p>
+                Happy first month to us, lovei. 🤍
+                Honestly, I don't even know how to start this message because
+                we're celebrating our first month while things between us
+                aren't really okay right now.
+            </p>
+
+
+            <p>
+                But even though things are difficult, I still wanted to write
+                something for you because this day means something to me.
+                Our first month may not be perfect, and maybe this isn't how
+                we imagined we'd spend it, but I don't want to pretend that
+                everything is okay when it isn't.
+            </p>
+
+
+            <p>
+                We've had misunderstandings, arguments, overthinking, and
+                moments where we both got hurt. There were times when I didn't
+                know what to say, and there were times when my emotions got
+                the better of me. I'm sorry for the moments when I made things
+                heavier for you instead of making things easier.
+            </p>
+
+
+            <div class="highlight">
+
+                I know saying "sorry" doesn't automatically fix everything,
+                but I genuinely mean it when I say that I'm sorry for the
+                things I've done that hurt you.
+
+            </div>
+
+
+            <p>
+                I also want you to know that I appreciate the moments we've
+                shared during this first month. The conversations, the random
+                moments, the jokes, the times we made each other smile, and
+                even the difficult conversations taught me a lot about us.
+            </p>
+
+
+            <p>
+                I'm not asking you to forget everything that happened or to
+                suddenly act like nothing is wrong just because it's our
+                first month. I understand that some things need time.
+                If we need space to calm down and think, I respect that.
+            </p>
+
+
+            <p>
+                What I hope is that while we have this difficult moment,
+                we don't completely forget why we chose each other in the
+                first place. I hope we can learn from what happened instead
+                of letting the same problems keep hurting us.
+            </p>
+
+
+            <p>
+                I know I'm not perfect, and I still have a lot of things I
+                need to work on within myself. I want to become better not
+                just by saying it, but by actually showing it through my
+                actions.
+            </p>
+
+
+            <p>
+                Thank you for staying through the moments that weren't easy.
+                Thank you for the memories we've already made in just one
+                month. Whatever happens next, I want you to know that this
+                month was important to me.
+            </p>
+
+
+            <div class="highlight">
+
+                Maybe our first month isn't a perfect celebration, but
+                relationships aren't always made of perfect days. Sometimes
+                they're also about learning how to communicate, understand
+                each other, apologize, give each other space, and try again
+                when both people are ready.
+
+            </div>
+
+
+            <p>
+                I don't want our first month to be remembered only because
+                we had a difficult time. I want it to be the beginning of
+                something where we both learn, grow, and become better
+                versions of ourselves.
+            </p>
+
+
+            <p>
+                So, Happy 1st Month, lovei. 💜
+                Even if things aren't okay right now, I still hope that
+                someday we'll look back at this moment and realize that
+                we were able to get through it by understanding each other
+                better.
+            </p>
+
+
+            <p>
+                Take the time you need. I'll also take the time I need to
+                reflect and work on myself. I don't want us to force anything.
+                I just want whatever happens next to be honest, peaceful,
+                and something we're both ready for.
+            </p>
+
+
+            <!-- FINAL MESSAGE -->
+
+            <p class="ending">
+
+                Happy first month to us. 💜
+
+                <br><br>
+
+                Thank you for being part of my first month with you. 🤍
+
+                <br><br>
+
+                I hope this isn't the end of our story,
+                but the beginning of us learning how to understand
+                each other better.
+
+            </p>
+
+
+            <div class="stars">
+                ✦ ♡ ✦ ♡ ✦
+            </div>
+
+
+            <p class="small">
+                Made with sincerity, even on the difficult days. 💜
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>
